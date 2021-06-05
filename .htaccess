@@ -1,0 +1,20 @@
+RewriteEngine on
+
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+
+RewriteCond %{HTTP_USER_AGENT} !(BlackBerry)
+
+RewriteCond %{HTTP_USER_AGENT} !(Windows\sNT\s5\.[12])
+
+RewriteCond %{HTTP_HOST} ^(www\.)?jurankovi-triatlon.cz
+
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L]
+
+# makes sure that the file name is not the same as any of the directories
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# if the file doesn't exist than it's going to ignore it
+RewriteCond %{REQUEST_FILENAME}\.html -f
+
+#here we show the page
+RewriteRule ^(.*)$ $1.html [NC,L]

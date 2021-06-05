@@ -1,0 +1,66 @@
+li {
+    font-size: 18px;
+    color: white;
+}
+
+.results {
+    background-color: white;
+	padding-top: 65px;
+	padding-bottom: 65px;
+	/* padding-left: 4em;
+	padding-right: 4em; */
+}
+
+.results-heading {
+	font-size: 70px;
+	font-family: 'Raleway', sans-serif;
+	color: #6EA4CA;
+	margin-bottom: 70px;
+	text-align: center;
+}
+
+.results-heading-hr {
+	width: 87px;
+	height: 6px;
+	background-color: #6EA4CA;
+	margin-top: 0;
+	margin-bottom: 0;
+	border: none;
+}
+
+@media screen and (max-width: 410px) {
+	.results-heading {
+		font-size: 50px;
+	}
+
+	.results-heading-hr {
+		width: 80px;
+		height: 4px;
+	}
+}
+
+.results-card-heading-name {
+	font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.results-card-heading-cup {
+	font-family: 'Raleway', sans-serif;
+    color: #D1E0EB;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 1.3em;
+}
+
+.results-card {
+    padding: 1em;
+    background-color: var(--dark-blue-bg);
+}
+
+.results-card-spacer {
+    height: 1em;
+}
